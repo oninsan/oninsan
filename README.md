@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/banner.svg">
-    <img src="assets/banner.gif" alt="Niño Abao — Web Developer and IT Instructor. Build with purpose. Teach with clarity." width="1000">
+    <img src="assets/banner.gif" alt="Niño Abao, web developer and IT instructor. Build with purpose. Teach with clarity." width="1000">
   </picture>
 </p>
 
@@ -14,7 +14,7 @@
 
 # Useful software. Clear ideas. A little personality.
 
-Hi, I'm **Niño Abao** — a **web developer and IT instructor** based in **Bogo City, Cebu, Philippines**. I build websites, web applications, and practical tools, and help students turn programming concepts into things they can actually use.
+Hi, I'm **Niño Abao**, a **web developer and IT instructor** based in **Bogo City, Cebu, Philippines**. I build websites, web applications, and practical tools, and help students turn programming concepts into things they can actually use.
 
 I enjoy working across the stack: crafting responsive interfaces, connecting APIs and databases, and making everyday workflows simpler. My projects range from education tools and learning platforms to mobile teaching demos and reusable TypeScript packages.
 
@@ -28,7 +28,10 @@ I enjoy working across the stack: crafting responsive interfaces, connecting API
 
 ## My toolkit
 
-<img src="assets/toolkit.svg" alt="Selected tools: TypeScript, React, Svelte, Python, .NET, and Docker" width="1000">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/toolkit.svg">
+  <img src="assets/toolkit.gif" alt="Selected tools: TypeScript, React, Svelte, Python, .NET, and Docker" width="1000">
+</picture>
 
 | Area | Languages, frameworks & tools |
 | :--- | :--- |
@@ -55,19 +58,22 @@ Projects that show how I build, solve problems, and teach.
 <details>
 <summary><strong>A few more projects from my portfolio</strong></summary>
 
-- **[Resume Maker](https://gitlab.com/oninsama/resume-maker/-/tree/master)** — a tool for creating personalized CVs with flexible sections. Built with HTML, CSS, PHP, and SQL.
-- **[Online Archive of Learning Materials](https://gitlab.com/oninsama/onlinarchiveforlearningmaterials)** — a learning resource platform for teachers and students. Built with MongoDB, Express, React, and Node.js.
-- **[Bluewave](https://github.com/oninsan/3rd-ecom)** — an early Django project for discovering tourist spots in Bogo City.
+- **[Resume Maker](https://gitlab.com/oninsama/resume-maker/-/tree/master):** a tool for creating personalized CVs with flexible sections. Built with HTML, CSS, PHP, and SQL.
+- **[Online Archive of Learning Materials](https://gitlab.com/oninsama/onlinarchiveforlearningmaterials):** a learning resource platform for teachers and students. Built with MongoDB, Express, React, and Node.js.
+- **[Bluewave](https://github.com/oninsan/3rd-ecom):** an early Django project for discovering tourist spots in Bogo City.
 
 </details>
 
 ## Beyond the keyboard
 
-<img src="assets/hobbies.svg" alt="My hobbies: playing guitar, coding, and playing paddle sports" width="1000">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hobbies.svg">
+  <img src="assets/hobbies.gif" alt="My hobbies: playing guitar, coding, and playing paddle sports" width="1000">
+</picture>
 
-- **Playing guitar** — time for music between projects.
-- **Coding** — a profession, a hobby, and a reason to keep experimenting.
-- **Playing paddle sports** — time to get moving and enjoy the game.
+- **Playing guitar:** time for music between projects.
+- **Coding:** a profession, a hobby, and a reason to keep experimenting.
+- **Playing paddle sports:** time to get moving and enjoy the game.
 
 ## Let's connect
 
@@ -75,4 +81,7 @@ Have a project, a technical idea, or something worth building together? I'd love
 
 **[Email](mailto:kokoybaldofordawin@gmail.com)** · **[LinkedIn](https://www.linkedin.com/in/ni%C3%B1o-abao-415124185/)** · **[GitHub](https://github.com/oninsan)** · **[Portfolio source](https://github.com/oninsan/DevPortfolio)**
 
-<img src="assets/footer.svg" alt="Build with purpose. Teach with clarity." width="1000">
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/footer.svg">
+  <img src="assets/footer.gif" alt="Build with purpose. Teach with clarity." width="1000">
+</picture>

@@ -12,13 +12,13 @@
   <a href="https://github.com/oninsan?tab=repositories"><img src="assets/projects.svg" alt="Browse my repositories" height="36"></a>
 </p>
 
-# Useful software. Clear ideas. A little personality.
+## Code, craft, and curiosity
 
-Hi, I'm **Niño Abao**, a **web developer and IT instructor** based in **Bogo City, Cebu, Philippines**. I build websites, web applications, and practical tools, and help students turn programming concepts into things they can actually use.
+I'm **Niño Abao**, a **web developer and IT instructor** in **Bogo City, Cebu, Philippines**. I build practical web and mobile applications and help students turn programming concepts into real projects.
 
-I enjoy working across the stack: crafting responsive interfaces, connecting APIs and databases, and making everyday workflows simpler. My projects range from education tools and learning platforms to mobile teaching demos and reusable TypeScript packages.
+From responsive interfaces to APIs and databases, I enjoy building software that makes everyday work simpler. Clean code, reusable components, and clear documentation guide how I work.
 
-### What I bring to the table
+### How I work
 
 - **Web development:** responsive websites, interactive applications, and thoughtful user experiences.
 - **Backend development:** REST APIs, application logic, database integration, and workflow automation.
@@ -45,7 +45,7 @@ I enjoy working across the stack: crafting responsive interfaces, connecting API
 
 ## Selected work
 
-Projects that show how I build, solve problems, and teach.
+Practical tools, teaching resources, and reusable building blocks.
 
 | Project | What it does | Built with |
 | :--- | :--- | :--- |

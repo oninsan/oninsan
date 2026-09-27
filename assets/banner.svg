@@ -1,84 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="380" viewBox="0 0 1000 380">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360">
     <defs>
       <linearGradient id="accent" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0"><stop stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
       <radialGradient id="glow"><stop stop-color="#7c3aed" stop-opacity=".45"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
       <radialGradient id="cyan-glow"><stop stop-color="#22d3ee" stop-opacity=".22"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
-      <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#b6b6ff" stroke-opacity=".045" fill="none"/></pattern>
-      <clipPath id="bounds"><rect x="1" y="1" width="998" height="378" rx="18"/></clipPath>
+      <clipPath id="bounds"><rect x="1" y="1" width="998" height="358" rx="18"/></clipPath>
     </defs>
-    <rect width="1000" height="380" rx="18" fill="#0c1020"/>
-    <g clip-path="url(#bounds)"><rect width="1000" height="380" fill="url(#grid)"/>
+    <rect width="1000" height="360" rx="18" fill="#0c1020"/>
+    <g clip-path="url(#bounds)">
     <g font-family="DejaVu Sans, Arial, sans-serif">
-      <circle cx="770.00" cy="170" r="255" fill="url(#glow)" opacity="0.60"/>
-      <circle cx="330.00" cy="350" r="220" fill="url(#cyan-glow)"/>
-      <circle cx="0.00" cy="380.00" r="3.9000000000000004" fill="#67e8f9" opacity="0.019"/>
-      <circle cx="0.00" cy="380.00" r="1.3" fill="#67e8f9" opacity="0.150"/><circle cx="122.24" cy="360.00" r="3.9000000000000004" fill="#c5b4ff" opacity="0.024"/>
-      <circle cx="122.24" cy="360.00" r="1.3" fill="#c5b4ff" opacity="0.183"/><circle cx="221.28" cy="340.00" r="3.9000000000000004" fill="#f5afd4" opacity="0.028"/>
-      <circle cx="221.28" cy="340.00" r="1.3" fill="#f5afd4" opacity="0.215"/><circle cx="295.23" cy="320.00" r="3.9000000000000004" fill="#67e8f9" opacity="0.032"/>
-      <circle cx="295.23" cy="320.00" r="1.3" fill="#67e8f9" opacity="0.245"/><circle cx="365.30" cy="300.00" r="3.9000000000000004" fill="#c5b4ff" opacity="0.035"/>
-      <circle cx="365.30" cy="300.00" r="1.3" fill="#c5b4ff" opacity="0.273"/><circle cx="456.23" cy="280.00" r="3.9000000000000004" fill="#f5afd4" opacity="0.039"/>
-      <circle cx="456.23" cy="280.00" r="1.3" fill="#f5afd4" opacity="0.297"/><circle cx="573.62" cy="260.00" r="3.9000000000000004" fill="#67e8f9" opacity="0.041"/>
-      <circle cx="573.62" cy="260.00" r="1.3" fill="#67e8f9" opacity="0.317"/><circle cx="698.71" cy="240.00" r="3.9000000000000004" fill="#c5b4ff" opacity="0.043"/>
-      <circle cx="698.71" cy="240.00" r="1.3" fill="#c5b4ff" opacity="0.333"/><circle cx="805.68" cy="220.00" r="3.9000000000000004" fill="#f5afd4" opacity="0.045"/>
-      <circle cx="805.68" cy="220.00" r="1.3" fill="#f5afd4" opacity="0.344"/><circle cx="885.36" cy="200.00" r="3.9000000000000004" fill="#67e8f9" opacity="0.045"/>
-      <circle cx="885.36" cy="200.00" r="1.3" fill="#67e8f9" opacity="0.349"/><circle cx="953.68" cy="180.00" r="3.9000000000000004" fill="#c5b4ff" opacity="0.045"/>
-      <circle cx="953.68" cy="180.00" r="1.3" fill="#c5b4ff" opacity="0.349"/><circle cx="37.00" cy="160.00" r="3.9000000000000004" fill="#f5afd4" opacity="0.045"/>
-      <circle cx="37.00" cy="160.00" r="1.3" fill="#f5afd4" opacity="0.344"/><circle cx="147.90" cy="140.00" r="3.9000000000000004" fill="#67e8f9" opacity="0.043"/>
-      <circle cx="147.90" cy="140.00" r="1.3" fill="#67e8f9" opacity="0.333"/><circle cx="273.61" cy="120.00" r="3.9000000000000004" fill="#c5b4ff" opacity="0.041"/>
-      <circle cx="273.61" cy="120.00" r="1.3" fill="#c5b4ff" opacity="0.317"/><circle cx="387.72" cy="100.00" r="3.9000000000000004" fill="#f5afd4" opacity="0.039"/>
-      <circle cx="387.72" cy="100.00" r="1.3" fill="#f5afd4" opacity="0.297"/><circle cx="474.51" cy="80.00" r="3.9000000000000004" fill="#67e8f9" opacity="0.035"/>
-      <circle cx="474.51" cy="80.00" r="1.3" fill="#67e8f9" opacity="0.273"/><circle cx="543.36" cy="60.00" r="3.9000000000000004" fill="#c5b4ff" opacity="0.032"/>
-      <circle cx="543.36" cy="60.00" r="1.3" fill="#c5b4ff" opacity="0.245"/><circle cx="620.16" cy="40.00" r="3.9000000000000004" fill="#f5afd4" opacity="0.028"/>
-      <circle cx="620.16" cy="40.00" r="1.3" fill="#f5afd4" opacity="0.215"/><circle cx="723.47" cy="20.00" r="3.9000000000000004" fill="#67e8f9" opacity="0.024"/>
-      <circle cx="723.47" cy="20.00" r="1.3" fill="#67e8f9" opacity="0.183"/>
-      <rect x="1" y="1" width="998" height="378" rx="18" stroke="url(#accent)" stroke-opacity=".45" fill="none"/>
-      <path d="M48 35H952" stroke="url(#accent)" stroke-width="2" opacity=".65"/>
-      <circle cx="48.00" cy="35.00" r="9" fill="#67e8f9" opacity="0.111"/>
-      <circle cx="48.00" cy="35.00" r="3" fill="#67e8f9" opacity="0.850"/>
-      <text x="48" y="76" fill="#a5aeca" font-size="16">oninsan / Cebu, Philippines</text>
-      <text x="44" y="158" fill="#f5f7ff" font-size="70" font-weight="700" letter-spacing="-2">Niño Abao<tspan fill="#67e8f9">.</tspan></text>
-      <path d="M48 173H406" stroke="url(#accent)" stroke-width="2" opacity=".7"/>
-      <text x="48" y="209" fill="#c5b4ff" font-size="22">Web developer / IT instructor</text>
-      <text x="48" y="253" fill="#d8dfef" font-size="22">Build with purpose. Teach with clarity.</text>
-      <rect x="48" y="286" width="79" height="31" rx="15" fill="#123442" stroke="#67e8f9" stroke-opacity="0.35"/>
-          <text x="87.5" y="307" text-anchor="middle" fill="#67e8f9" font-size="14">Build</text><rect x="139" y="286" width="82" height="31" rx="15" fill="#262044" stroke="#c5b4ff" stroke-opacity="0.48"/>
-          <text x="180.0" y="307" text-anchor="middle" fill="#c5b4ff" font-size="14">Teach</text><rect x="233" y="286" width="96" height="31" rx="15" fill="#342039" stroke="#f5afd4" stroke-opacity="0.49"/>
-          <text x="281.0" y="307" text-anchor="middle" fill="#f5afd4" font-size="14">Explore</text>
-      <ellipse cx="809" cy="174" rx="139" ry="121" fill="none" stroke="#a78bfa" stroke-opacity=".25"/>
-      <ellipse cx="809" cy="174" rx="116" ry="98" fill="none" stroke="#a78bfa" stroke-opacity=".25" stroke-dasharray="3 9" stroke-dashoffset="0"/>
+      <circle cx="804" cy="166" r="245" fill="url(#glow)" opacity=".75"/>
+      <circle cx="120" cy="360" r="240" fill="url(#cyan-glow)" opacity=".32"/>
+      <circle cx="618.00" cy="73.00" r="4.199999999999999" fill="#c5b4ff" opacity="0.033"/>
+      <circle cx="618.00" cy="73.00" r="1.4" fill="#c5b4ff" opacity="0.250"/><circle cx="968.21" cy="233.16" r="4.5" fill="#67e8f9" opacity="0.051"/>
+      <circle cx="968.21" cy="233.16" r="1.5" fill="#67e8f9" opacity="0.392"/><circle cx="690.55" cy="300.34" r="4.199999999999999" fill="#f5afd4" opacity="0.054"/>
+      <circle cx="690.55" cy="300.34" r="1.4" fill="#f5afd4" opacity="0.415"/><circle cx="915.71" cy="53.04" r="4.800000000000001" fill="#c5b4ff" opacity="0.033"/>
+      <circle cx="915.71" cy="53.04" r="1.6" fill="#c5b4ff" opacity="0.254"/><circle cx="569.22" cy="303.39" r="3.5999999999999996" fill="#67e8f9" opacity="0.047"/>
+      <circle cx="569.22" cy="303.39" r="1.2" fill="#67e8f9" opacity="0.365"/>
+      <text x="52" y="67" fill="#9ba7c1" font-size="15">oninsan · Cebu, Philippines</text>
+      <text x="48" y="148" fill="#f5f7ff" font-size="70" font-weight="700" letter-spacing="-2">Niño Abao<tspan fill="#67e8f9">.</tspan></text>
+      <text x="52" y="191" fill="#c5b4ff" font-size="22">Web developer / IT instructor</text>
+      <text x="52" y="238" fill="#d8dfef" font-size="21">Build with purpose. Teach with clarity.</text>
+      <rect x="52" y="274" width="80" height="32" rx="16" fill="#12303b"/>
+          <text x="92.0" y="295" text-anchor="middle" fill="#67e8f9" font-size="14">Build</text><rect x="143" y="274" width="82" height="32" rx="16" fill="#26203d"/>
+          <text x="184.0" y="295" text-anchor="middle" fill="#c5b4ff" font-size="14">Teach</text><rect x="236" y="274" width="94" height="32" rx="16" fill="#302034"/>
+          <text x="283.0" y="295" text-anchor="middle" fill="#f5afd4" font-size="14">Explore</text>
+      <circle cx="914.31" cy="100.85" r="9" fill="#67e8f9" opacity="0.098"/>
+      <circle cx="914.31" cy="100.85" r="3" fill="#67e8f9" opacity="0.750"/>
       <g transform="translate(0 0.00)">
-      <rect x="679" y="104" width="260" height="160" rx="13" fill="#15192d" stroke="url(#accent)" stroke-opacity=".75"/>
-      <path d="M679 137H939" stroke="#36344f"/>
-      <circle cx="696" cy="121" r="3.5" fill="#f472b6"/><circle cx="709" cy="121" r="3.5" fill="#a78bfa"/><circle cx="722" cy="121" r="3.5" fill="#22d3ee"/>
-      <text x="749" y="125" fill="#8793b2" font-size="12">~/oninsan</text>
-      <g font-family="DejaVu Sans Mono, monospace" font-size="15">
-      <text x="698" y="169" fill="#a78bfa">build<tspan fill="#e4e8f7">(</tspan></text>
-      <text x="716" y="195" fill="#67e8f9">'something useful'</text>
-      <rect x="878.72" y="183" width="7" height="16" fill="#67e8f9" opacity="1"/>
-      <text x="698" y="221" fill="#e4e8f7">);</text>
-      <text x="698" y="247" fill="#9caac4">// learn. teach. repeat.</text>
+      <rect x="666" y="101" width="286" height="175" rx="18" fill="#080c1c" opacity=".35"/>
+      <rect x="666" y="93" width="286" height="175" rx="18" fill="#171a2f"/>
+      <rect x="666" y="93" width="286" height="175" rx="18" fill="url(#glow)" opacity=".13"/>
+      <circle cx="689" cy="115" r="3.5" fill="#f472b6"/><circle cx="703" cy="115" r="3.5" fill="#a78bfa"/><circle cx="717" cy="115" r="3.5" fill="#22d3ee"/>
+      <text x="757" y="119" fill="#8f9ab7" font-size="12">~/oninsan</text>
+      <g font-family="DejaVu Sans Mono, monospace" font-size="17">
+      <text x="688" y="158" fill="#a78bfa">const <tspan fill="#e4e8f7">mindset = {</tspan></text>
+      <text x="708" y="185" fill="#a4afc7">build: <tspan fill="#67e8f9">'useful'</tspan><tspan fill="#dce3f2">,</tspan></text>
+      <rect x="873.84" y="171" width="6" height="17" rx="1" fill="#67e8f9" opacity="1"/>
+      <text x="708" y="212" fill="#a4afc7">learn: <tspan fill="#f5afd4">'always'</tspan></text>
+      <text x="688" y="239" fill="#e4e8f7">};</text>
       </g></g>
-      <circle cx="948.00" cy="174.00" r="10.5" fill="#67e8f9" opacity="0.111"/>
-      <circle cx="948.00" cy="174.00" r="3.5" fill="#67e8f9" opacity="0.850"/><circle cx="947.86" cy="168.56" r="5.4" fill="#67e8f9" opacity="0.100"/>
-      <circle cx="947.86" cy="168.56" r="1.8" fill="#67e8f9" opacity="0.773"/><circle cx="947.44" cy="163.12" r="5.4" fill="#67e8f9" opacity="0.090"/>
-      <circle cx="947.44" cy="163.12" r="1.8" fill="#67e8f9" opacity="0.695"/><circle cx="946.74" cy="157.71" r="5.4" fill="#67e8f9" opacity="0.080"/>
-      <circle cx="946.74" cy="157.71" r="1.8" fill="#67e8f9" opacity="0.618"/><circle cx="945.75" cy="152.34" r="5.4" fill="#67e8f9" opacity="0.070"/>
-      <circle cx="945.75" cy="152.34" r="1.8" fill="#67e8f9" opacity="0.541"/><circle cx="944.50" cy="147.00" r="5.4" fill="#67e8f9" opacity="0.060"/>
-      <circle cx="944.50" cy="147.00" r="1.8" fill="#67e8f9" opacity="0.464"/><circle cx="942.96" cy="141.73" r="5.4" fill="#67e8f9" opacity="0.050"/>
-      <circle cx="942.96" cy="141.73" r="1.8" fill="#67e8f9" opacity="0.386"/><circle cx="941.16" cy="136.51" r="5.4" fill="#67e8f9" opacity="0.040"/>
-      <circle cx="941.16" cy="136.51" r="1.8" fill="#67e8f9" opacity="0.309"/><circle cx="939.09" cy="131.37" r="5.4" fill="#67e8f9" opacity="0.030"/>
-      <circle cx="939.09" cy="131.37" r="1.8" fill="#67e8f9" opacity="0.232"/><circle cx="936.76" cy="126.32" r="5.4" fill="#67e8f9" opacity="0.020"/>
-      <circle cx="936.76" cy="126.32" r="1.8" fill="#67e8f9" opacity="0.155"/><circle cx="670.00" cy="174.00" r="10.5" fill="#f5afd4" opacity="0.111"/>
-      <circle cx="670.00" cy="174.00" r="3.5" fill="#f5afd4" opacity="0.850"/><circle cx="670.14" cy="179.44" r="5.4" fill="#f5afd4" opacity="0.100"/>
-      <circle cx="670.14" cy="179.44" r="1.8" fill="#f5afd4" opacity="0.773"/><circle cx="670.56" cy="184.88" r="5.4" fill="#f5afd4" opacity="0.090"/>
-      <circle cx="670.56" cy="184.88" r="1.8" fill="#f5afd4" opacity="0.695"/><circle cx="671.26" cy="190.29" r="5.4" fill="#f5afd4" opacity="0.080"/>
-      <circle cx="671.26" cy="190.29" r="1.8" fill="#f5afd4" opacity="0.618"/><circle cx="672.25" cy="195.66" r="5.4" fill="#f5afd4" opacity="0.070"/>
-      <circle cx="672.25" cy="195.66" r="1.8" fill="#f5afd4" opacity="0.541"/><circle cx="673.50" cy="201.00" r="5.4" fill="#f5afd4" opacity="0.060"/>
-      <circle cx="673.50" cy="201.00" r="1.8" fill="#f5afd4" opacity="0.464"/><circle cx="675.04" cy="206.27" r="5.4" fill="#f5afd4" opacity="0.050"/>
-      <circle cx="675.04" cy="206.27" r="1.8" fill="#f5afd4" opacity="0.386"/><circle cx="676.84" cy="211.49" r="5.4" fill="#f5afd4" opacity="0.040"/>
-      <circle cx="676.84" cy="211.49" r="1.8" fill="#f5afd4" opacity="0.309"/><circle cx="678.91" cy="216.63" r="5.4" fill="#f5afd4" opacity="0.030"/>
-      <circle cx="678.91" cy="216.63" r="1.8" fill="#f5afd4" opacity="0.232"/><circle cx="681.24" cy="221.68" r="5.4" fill="#f5afd4" opacity="0.020"/>
-      <circle cx="681.24" cy="221.68" r="1.8" fill="#f5afd4" opacity="0.155"/>
-      <text x="809" y="312" text-anchor="middle" fill="#a5aec7" font-size="14">Curious by default</text>
-      <polyline points="42,353.41 50,353.78 58,354.11 66,354.40 74,354.63 82,354.81 90,354.93 98,354.99 106,354.99 114,354.93 122,354.81 130,354.64 138,354.41 146,354.12 154,353.79 162,353.42 170,353.01 178,352.57 186,352.11 194,351.63 202,351.14 210,350.64 218,350.16 226,349.68 234,349.23 242,348.80 250,348.41 258,348.05 266,347.74 274,347.48 282,347.28 290,347.13 298,347.03 306,347.00 314,347.03 322,347.12 330,347.26 338,347.47 346,347.72 354,348.03 362,348.38 370,348.77 378,349.20 386,349.65 394,350.12 402,350.61 410,351.10 418,351.59 426,352.07 434,352.53 442,352.98 450,353.39 458,353.76 466,354.10 474,354.39 482,354.62 490,354.80 498,354.93 506,354.99 514,354.99 522,354.94 530,354.82 538,354.65 546,354.42 554,354.14 562,353.81 570,353.44 578,353.03 586,352.59 594,352.13 602,351.65 610,351.16 618,350.67 626,350.18 634,349.71 642,349.25 650,348.82 658,348.43 666,348.07 674,347.76 682,347.50 690,347.29 698,347.13 706,347.04 714,347.00 722,347.03 730,347.11 738,347.25 746,347.45 754,347.71 762,348.01 770,348.36 778,348.75 786,349.17 794,349.62 802,350.10 810,350.58 818,351.07 826,351.56 834,352.05 842,352.51 850,352.95 858,353.37 866,353.75 874,354.08 882,354.37 890,354.61 898,354.79 906,354.92 914,354.99 922,355.00 930,354.94 938,354.83 946,354.66 954,354.43" fill="none" stroke="#67e8f9" stroke-width="1" opacity=".22"/><polyline points="42,355.00 50,354.98 58,354.90 66,354.76 74,354.57 82,354.32 90,354.02 98,353.68 106,353.29 114,352.87 122,352.43 130,351.96 138,351.47 146,350.98 154,350.49 162,350.01 170,349.54 178,349.09 186,348.68 194,348.29 202,347.95 210,347.66 218,347.41 226,347.22 234,347.09 242,347.02 250,347.00 258,347.05 266,347.16 274,347.32 282,347.54 290,347.81 298,348.13 306,348.50 314,348.90 322,349.33 330,349.79 338,350.27 346,350.76 354,351.25 362,351.74 370,352.22 378,352.68 386,353.11 394,353.51 402,353.87 410,354.19 418,354.46 426,354.68 434,354.85 442,354.95 450,355.00 458,354.98 466,354.91 474,354.77 482,354.58 490,354.34 498,354.04 506,353.70 514,353.31 522,352.90 530,352.45 538,351.98 546,351.50 554,351.01 562,350.52 570,350.03 578,349.56 586,349.12 594,348.70 602,348.31 610,347.97 618,347.67 626,347.42 634,347.23 642,347.10 650,347.02 658,347.00 666,347.05 674,347.15 682,347.31 690,347.53 698,347.80 706,348.12 714,348.48 722,348.88 730,349.31 738,349.77 746,350.25 754,350.73 762,351.23 770,351.72 778,352.19 786,352.65 794,353.09 802,353.49 810,353.86 818,354.18 826,354.45 834,354.67 842,354.84 850,354.95 858,355.00 866,354.99 874,354.91 882,354.78 890,354.59 898,354.35 906,354.06 914,353.72 922,353.34 930,352.92 938,352.47 946,352.01 954,351.52" fill="none" stroke="#c5b4ff" stroke-width="1" opacity=".22"/><polyline points="42,353.56 50,353.17 58,352.74 66,352.28 74,351.81 82,351.32 90,350.83 98,350.34 106,349.86 114,349.40 122,348.96 130,348.55 138,348.18 146,347.86 154,347.58 162,347.35 170,347.18 178,347.06 186,347.01 194,347.01 202,347.08 210,347.20 218,347.38 226,347.62 234,347.91 242,348.24 250,348.62 258,349.03 266,349.48 274,349.94 282,350.42 290,350.91 298,351.41 306,351.89 314,352.36 322,352.81 330,353.24 338,353.63 346,353.98 354,354.28 362,354.54 370,354.74 378,354.89 386,354.97 394,355.00 402,354.97 410,354.87 418,354.72 426,354.51 434,354.25 442,353.94 450,353.58 458,353.19 466,352.76 474,352.31 482,351.83 490,351.34 498,350.85 506,350.36 514,349.88 522,349.42 530,348.98 538,348.57 546,348.20 554,347.87 562,347.59 570,347.36 578,347.18 586,347.06 594,347.01 602,347.01 610,347.07 618,347.19 626,347.37 634,347.61 642,347.89 650,348.23 658,348.60 666,349.01 674,349.45 682,349.92 690,350.40 698,350.89 706,351.38 714,351.87 722,352.34 730,352.79 738,353.22 746,353.61 754,353.96 762,354.27 770,354.53 778,354.73 786,354.88 794,354.97 802,355.00 810,354.97 818,354.88 826,354.73 834,354.52 842,354.26 850,353.95 858,353.60 866,353.21 874,352.78 882,352.33 890,351.86 898,351.37 906,350.88 914,350.39 922,349.91 930,349.44 938,349.00 946,348.59 954,348.22" fill="none" stroke="#f5afd4" stroke-width="1" opacity=".22"/>
+      <text x="809" y="307" text-anchor="middle" fill="#a5aec7" font-size="14">Curious by default</text>
     </g></g></svg>

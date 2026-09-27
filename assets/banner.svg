@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="360" viewBox="0 0 1000 360">
+    <defs>
+      <linearGradient id="accent" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
+      <radialGradient id="glow"><stop stop-color="#7c3aed" stop-opacity=".32"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+      <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#b6b6ff" stroke-opacity=".045" fill="none"/></pattern>
+    </defs>
+    <rect width="1000" height="360" rx="18" fill="#0c1020"/>
+    <rect width="1000" height="360" rx="18" fill="url(#grid)"/>
+    <g font-family="DejaVu Sans, Arial, sans-serif">
+      <circle cx="795" cy="170" r="235" fill="url(#glow)"/>
+      <path d="M40 35H960" stroke="url(#accent)" stroke-width="2"/>
+      <text x="48" y="73" fill="#a5aeca" font-size="13" letter-spacing="3">ONINSAN / CEBU, PHILIPPINES</text>
+      <text x="44" y="156" fill="#f5f7ff" font-size="66" font-weight="700" letter-spacing="-2">Niño Abao<tspan fill="#22d3ee">.</tspan></text>
+      <text x="48" y="198" fill="#c5b4ff" font-size="19" letter-spacing="1">WEB DEVELOPER / IT INSTRUCTOR</text>
+      <text x="48" y="246" fill="#d8dfef" font-size="22">Build with purpose. Teach with clarity.</text>
+      <rect x="48" y="278" width="78" height="29" rx="14" fill="#123442" stroke="#255663"/>
+      <text x="87" y="297" text-anchor="middle" fill="#7ee7f7" font-size="12" font-weight="700">BUILD</text>
+      <rect x="135" y="278" width="80" height="29" rx="14" fill="#262044" stroke="#403467"/>
+      <text x="175" y="297" text-anchor="middle" fill="#c7b7ff" font-size="12" font-weight="700">TEACH</text>
+      <rect x="224" y="278" width="91" height="29" rx="14" fill="#342039" stroke="#62344d"/>
+      <text x="269" y="297" text-anchor="middle" fill="#f5afd4" font-size="12" font-weight="700">EXPLORE</text>
+      <circle cx="810" cy="173" r="119" fill="none" stroke="#8374bd" stroke-opacity=".25"/>
+      <circle cx="810" cy="173" r="95" fill="none" stroke="#a78bfa" stroke-opacity=".20" stroke-dasharray="3 9"/>
+      <circle cx="901.02" cy="96.34" r="12" fill="#22d3ee" opacity=".12"/>
+      <circle cx="901.02" cy="96.34" r="4" fill="#67e8f9"/>
+      <rect x="684" y="108" width="252" height="145" rx="13" fill="#15192d" stroke="#4c426d"/>
+      <path d="M684 139H936" stroke="#36344f"/>
+      <circle cx="701" cy="124" r="3.5" fill="#f472b6"/><circle cx="714" cy="124" r="3.5" fill="#a78bfa"/><circle cx="727" cy="124" r="3.5" fill="#22d3ee"/>
+      <g font-family="DejaVu Sans Mono, monospace" font-size="15">
+      <text x="703" y="173" fill="#a78bfa">const <tspan fill="#e4e8f7">mindset = {</tspan></text>
+      <text x="717" y="198" fill="#9caac4">  build: <tspan fill="#67e8f9">'useful',</tspan></text>
+      <text x="717" y="222" fill="#9caac4">  learn: <tspan fill="#f5afd4">'always'</tspan></text>
+      <text x="703" y="243" fill="#e4e8f7">};</text>
+      </g>
+      <text x="810" y="319" text-anchor="middle" fill="#8d96b1" font-size="12" letter-spacing="2">CURIOUS BY DEFAULT</text>
+    </g>
+    </svg>

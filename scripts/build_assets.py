@@ -2,16 +2,20 @@
 
 Run: python3 scripts/build_assets.py
 Each GIF has a matching static SVG for readers who prefer reduced motion.
+Content hashes in filenames prevent GitHub from showing cached artwork.
 """
 from pathlib import Path
 from io import BytesIO
 import math
 import subprocess
+import hashlib
+import re
 from PIL import Image
 
 ASSETS = Path(__file__).resolve().parents[1] / 'assets'
 ASSETS.mkdir(exist_ok=True)
 CYAN, PURPLE, PINK = '#67e8f9', '#c5b4ff', '#f5afd4'
+MANIFEST = {}
 
 
 def svg(body, height=360, width=1000):
@@ -130,8 +134,31 @@ def footer(phase=0, still=False):
     return svg(f'''{dots}<text x="500" y="60" text-anchor="middle" fill="#b3bed7" font-size="16">Build with purpose. Teach with clarity.</text>''',84)
 
 
+def save_asset(name, payload):
+    original = Path(name)
+    digest = hashlib.sha256(payload).hexdigest()[:10]
+    path = ASSETS / f'{original.stem}-{digest}{original.suffix}'
+    path.write_bytes(payload)
+    MANIFEST[name] = f'assets/{path.name}'
+    return path
+
+
 def write(name, content):
-    (ASSETS/name).write_text(content,encoding='utf-8')
+    return save_asset(name,content.encode('utf-8'))
+
+
+def update_readme_assets():
+    readme = ASSETS.parent / 'README.md'
+    pattern = r'assets/([a-z]+)(?:-[0-9a-f]{10})?\.(gif|svg)'
+    updated = re.sub(pattern,lambda m: MANIFEST.get(f'{m[1]}.{m[2]}',m[0]),
+                     readme.read_text(encoding='utf-8'))
+    readme.write_text(updated,encoding='utf-8')
+    keep = {Path(path).name for path in MANIFEST.values()}
+    stems = '|'.join(sorted({Path(name).stem for name in MANIFEST}))
+    generated = re.compile(rf'({stems})(?:-[0-9a-f]{{10}})?\.(gif|svg)')
+    for path in ASSETS.iterdir():
+        if path.is_file() and generated.fullmatch(path.name) and path.name not in keep:
+            path.unlink()
 
 
 def render_animation(name, factory, height, count=48):
@@ -147,9 +174,11 @@ def render_animation(name, factory, height, count=48):
         samples.paste(frames[i],(0,height*j))
     palette=samples.quantize(colors=256)
     indexed=[f.quantize(palette=palette,dither=Image.Dither.NONE) for f in frames]
-    indexed[0].save(ASSETS/f'{name}.gif',save_all=True,append_images=indexed[1:],
+    output = BytesIO()
+    indexed[0].save(output,format='GIF',save_all=True,append_images=indexed[1:],
         duration=100,loop=0,optimize=True,disposal=1)
-    print(f'{name}.gif: {(ASSETS/f"{name}.gif").stat().st_size:,} bytes',flush=True)
+    path = save_asset(f'{name}.gif',output.getvalue())
+    print(f'{path.name}: {path.stat().st_size:,} bytes',flush=True)
 
 
 if __name__=='__main__':
@@ -167,3 +196,4 @@ if __name__=='__main__':
           <circle cx="16" cy="18" r="3" fill="{color}"/>
           <text x="{width/2+7}" y="22" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="12" fill="#e8ecff">{label}</text>
         </svg>''')
+    update_readme_assets()

@@ -1,15 +1,15 @@
 <p align="center">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/banner.svg">
-    <img src="assets/banner.gif" alt="Niño Abao, web developer and IT instructor. Build with purpose. Teach with clarity." width="1000">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/banner-538f7c4799.svg">
+    <img src="assets/banner-5e112dad31.gif" alt="Niño Abao, web developer and IT instructor. Build with purpose. Teach with clarity." width="1000">
   </picture>
 </p>
 
 <p align="center">
-  <a href="https://github.com/oninsan/DevPortfolio"><img src="assets/portfolio.svg" alt="Explore my portfolio source" height="36"></a>
-  <a href="https://www.linkedin.com/in/ni%C3%B1o-abao-415124185/"><img src="assets/linkedin.svg" alt="Connect on LinkedIn" height="36"></a>
-  <a href="mailto:kokoybaldofordawin@gmail.com"><img src="assets/email.svg" alt="Send me an email" height="36"></a>
-  <a href="https://github.com/oninsan?tab=repositories"><img src="assets/projects.svg" alt="Browse my repositories" height="36"></a>
+  <a href="https://github.com/oninsan/DevPortfolio"><img src="assets/portfolio-47688f24f0.svg" alt="Explore my portfolio source" height="36"></a>
+  <a href="https://www.linkedin.com/in/ni%C3%B1o-abao-415124185/"><img src="assets/linkedin-c20e65464a.svg" alt="Connect on LinkedIn" height="36"></a>
+  <a href="mailto:kokoybaldofordawin@gmail.com"><img src="assets/email-54f368d2bf.svg" alt="Send me an email" height="36"></a>
+  <a href="https://github.com/oninsan?tab=repositories"><img src="assets/projects-86815fbd1f.svg" alt="Browse my repositories" height="36"></a>
 </p>
 
 ## Code, craft, and curiosity
@@ -29,8 +29,8 @@ From responsive interfaces to APIs and databases, I enjoy building software that
 ## My toolkit
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/toolkit.svg">
-  <img src="assets/toolkit.gif" alt="Selected tools: TypeScript, React, Svelte, Python, .NET, and Docker" width="1000">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/toolkit-27ef06dd69.svg">
+  <img src="assets/toolkit-bb3bdf57a5.gif" alt="Selected tools: TypeScript, React, Svelte, Python, .NET, and Docker" width="1000">
 </picture>
 
 | Area | Languages, frameworks & tools |
@@ -67,8 +67,8 @@ Practical tools, teaching resources, and reusable building blocks.
 ## Beyond the keyboard
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hobbies.svg">
-  <img src="assets/hobbies.gif" alt="My hobbies: playing guitar, coding, and playing paddle sports" width="1000">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/hobbies-a1f40863d0.svg">
+  <img src="assets/hobbies-921f8407e1.gif" alt="My hobbies: playing guitar, coding, and playing paddle sports" width="1000">
 </picture>
 
 - **Playing guitar:** time for music between projects.
@@ -82,6 +82,6 @@ Have a project, a technical idea, or something worth building together? I'd love
 **[Email](mailto:kokoybaldofordawin@gmail.com)** · **[LinkedIn](https://www.linkedin.com/in/ni%C3%B1o-abao-415124185/)** · **[GitHub](https://github.com/oninsan)** · **[Portfolio source](https://github.com/oninsan/DevPortfolio)**
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/footer.svg">
-  <img src="assets/footer.gif" alt="Build with purpose. Teach with clarity." width="1000">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/footer-ff413b9c7e.svg">
+  <img src="assets/footer-710459b9f7.gif" alt="Build with purpose. Teach with clarity." width="1000">
 </picture>

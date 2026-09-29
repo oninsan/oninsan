@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="110" height="36" viewBox="0 0 110 36">
+          <rect width="110" height="36" rx="10" fill="#101d16"/>
+          <circle cx="16" cy="18" r="3" fill="#62f6a9"/>
+          <text x="62.0" y="22" text-anchor="middle" font-family="DejaVu Sans Mono, monospace" font-weight="600" font-size="12" fill="#d5ebdf">Email me</text>
+        </svg>

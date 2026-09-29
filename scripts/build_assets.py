@@ -14,124 +14,116 @@ from PIL import Image
 
 ASSETS = Path(__file__).resolve().parents[1] / 'assets'
 ASSETS.mkdir(exist_ok=True)
-CYAN, PURPLE, PINK = '#67e8f9', '#c5b4ff', '#f5afd4'
+GREEN, MINT = '#62f6a9', '#b8fbd5'
 MANIFEST = {}
 
 
-def svg(body, height=360, width=1000):
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+def svg(body, height=400, width=1000):
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
     <defs>
-      <linearGradient id="accent" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1000" y2="0"><stop stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient>
-      <radialGradient id="glow"><stop stop-color="#7c3aed" stop-opacity=".45"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
-      <radialGradient id="cyan-glow"><stop stop-color="#22d3ee" stop-opacity=".22"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
-      <clipPath id="bounds"><rect x="1" y="1" width="{width-2}" height="{height-2}" rx="18"/></clipPath>
+      <radialGradient id="glow"><stop stop-color="#20c878" stop-opacity=".18"/><stop offset="1" stop-color="#20c878" stop-opacity="0"/></radialGradient>
+      <clipPath id="bounds"><rect width="{width}" height="{height}" rx="18"/></clipPath>
+      <clipPath id="rain"><rect x="662" y="24" width="306" height="326" rx="16"/></clipPath>
     </defs>
-    <rect width="{width}" height="{height}" rx="18" fill="#0c1020"/>
-    <g clip-path="url(#bounds)">
-    <g font-family="DejaVu Sans, Arial, sans-serif">{body}</g></g></svg>'''
+    <rect width="{width}" height="{height}" rx="18" fill="#080f0d"/>
+    <g clip-path="url(#bounds)" font-family="DejaVu Sans Mono, monospace">{body}</g></svg>'''
 
 
 def spark(x, y, color, opacity=1, radius=3):
-    return f'''<circle cx="{x:.2f}" cy="{y:.2f}" r="{radius*3}" fill="{color}" opacity="{opacity*.13:.3f}"/>
+    return f'''<circle cx="{x:.2f}" cy="{y:.2f}" r="{radius*3}" fill="{color}" opacity="{opacity*.12:.3f}"/>
       <circle cx="{x:.2f}" cy="{y:.2f}" r="{radius}" fill="{color}" opacity="{opacity:.3f}"/>'''
 
 
 def banner(phase=0, still=False):
-    angle = phase * math.tau
-    particles = ''.join(
-        spark(x+5*math.sin(angle+i),y+4*math.cos(angle+i),color,
-              .25+.2*math.sin(angle+i)**2,radius)
-        for i,(x,y,color,radius) in enumerate([
-            (618,69,PURPLE,1.4),(964,231,CYAN,1.5),(686,302,PINK,1.4),
-            (915,57,PURPLE,1.6),(573,306,CYAN,1.2),
-        ])
-    )
-    orbit = spark(808+139*math.cos(angle-.7),173+112*math.sin(angle-.7),CYAN,.75,3)
-    typed = "'useful'" if still else "'useful'"[:min(8,int(phase*40)+1)]
-    cursor_opacity = 1 if still or int(phase*12)%2==0 else .25
-    float_y = 2*math.sin(angle)
-    chips = ''
-    for i,(x,w,label,bg,color) in enumerate([(52,80,'Build','#12303b',CYAN),(143,82,'Teach','#26203d',PURPLE),(236,94,'Explore','#302034',PINK)]):
-        chips += f'''<rect x="{x}" y="274" width="{w}" height="32" rx="16" fill="{bg}"/>
-          <text x="{x+w/2}" y="295" text-anchor="middle" fill="{color}" font-size="14">{label}</text>'''
+    angle=phase*math.tau
+    rain=''
+    for col in range(14):
+        x=672+col*21
+        offset=(phase*168+(col*43)%168)%168
+        for row in range(24):
+            y=22+row*24+offset-168
+            char='01{}[];'[(col*7+row*3)%7]
+            strength=.08+.12*((row+col)%7)/6
+            rain+=f'<text x="{x}" y="{y:.2f}" fill="{GREEN}" font-size="12" opacity="{strength:.3f}">{char}</text>'
+    typed='build useful things' if still else 'build useful things'[:min(19,int(phase*65)+1)]
+    cursor=1 if still or int(phase*12)%2==0 else .15
+    chips=''
+    for x,w,label in [(52,78,'Web'),(142,100,'Mobile'),(254,122,'Teaching')]:
+        chips+=f'''<rect x="{x}" y="337" width="{w}" height="31" rx="8" fill="#112a1d"/>
+          <text x="{x+w/2}" y="358" text-anchor="middle" fill="{MINT}" font-size="14">{label}</text>'''
     return svg(f'''
-      <circle cx="804" cy="166" r="245" fill="url(#glow)" opacity=".75"/>
-      <circle cx="120" cy="360" r="240" fill="url(#cyan-glow)" opacity=".32"/>
-      {particles}
-      <text x="52" y="67" fill="#9ba7c1" font-size="15">oninsan · Cebu, Philippines</text>
-      <text x="48" y="148" fill="#f5f7ff" font-size="70" font-weight="700" letter-spacing="-2">Niño Abao<tspan fill="{CYAN}">.</tspan></text>
-      <text x="52" y="191" fill="{PURPLE}" font-size="22">Web developer / IT instructor</text>
-      <text x="52" y="238" fill="#d8dfef" font-size="21">Build with purpose. Teach with clarity.</text>
+      <circle cx="813" cy="186" r="236" fill="url(#glow)"/>
+      <text x="52" y="64" fill="#829c8d" font-size="17">oninsan<tspan fill="#597165">@github:~$</tspan><tspan fill="{GREEN}"> whoami</tspan></text>
+      <text x="47" y="148" fill="#effbf4" font-size="66" font-weight="700" letter-spacing="-3">Niño Abao<tspan fill="{GREEN}">.</tspan></text>
+      <text x="52" y="190" fill="#c1d5c9" font-size="21">Web developer / IT instructor</text>
+      <text x="52" y="242" fill="{GREEN}" font-size="21">&gt; {typed}</text>
+      <rect x="{80+len(typed)*12.64}" y="225" width="9" height="21" rx="1" fill="{GREEN}" opacity="{cursor}"/>
+      <text x="52" y="273" fill="#92ad9e" font-size="21">&gt; teach what I learn</text>
+      <text x="52" y="310" fill="#799587" font-size="14">Bogo City, Cebu, Philippines</text>
       {chips}
-      {orbit}
-      <g transform="translate(0 {float_y:.2f})">
-      <rect x="666" y="101" width="286" height="175" rx="18" fill="#080c1c" opacity=".35"/>
-      <rect x="666" y="93" width="286" height="175" rx="18" fill="#171a2f"/>
-      <rect x="666" y="93" width="286" height="175" rx="18" fill="url(#glow)" opacity=".13"/>
-      <circle cx="689" cy="115" r="3.5" fill="#f472b6"/><circle cx="703" cy="115" r="3.5" fill="#a78bfa"/><circle cx="717" cy="115" r="3.5" fill="#22d3ee"/>
-      <text x="757" y="119" fill="#8f9ab7" font-size="12">~/oninsan</text>
-      <g font-family="DejaVu Sans Mono, monospace" font-size="17">
-      <text x="688" y="158" fill="#a78bfa">const <tspan fill="#e4e8f7">mindset = {{</tspan></text>
-      <text x="708" y="185" fill="#a4afc7">build: <tspan fill="{CYAN}">{typed}</tspan><tspan fill="#dce3f2">,</tspan></text>
-      <rect x="{710+(8+len(typed))*10.24}" y="171" width="6" height="17" rx="1" fill="{CYAN}" opacity="{cursor_opacity}"/>
-      <text x="708" y="212" fill="#a4afc7">learn: <tspan fill="{PINK}">'always'</tspan></text>
-      <text x="688" y="239" fill="#e4e8f7">}};</text>
-      </g></g>
-      <text x="809" y="307" text-anchor="middle" fill="#a5aec7" font-size="14">Curious by default</text>
+      <g clip-path="url(#rain)">{rain}</g>
+      <rect x="710" y="116" width="222" height="137" rx="16" fill="#0a1510" opacity=".9"/>
+      <text x="822" y="211" text-anchor="middle" fill="{GREEN}" font-size="96" font-weight="700" letter-spacing="-7">{{n}}</text>
+      <text x="822" y="285" text-anchor="middle" fill="#a3c6b1" font-size="15">curiosity.exe</text>
+      {spark(917,53,GREEN,.4+.3*math.sin(angle)**2,3)}
+      <text x="822" y="328" text-anchor="middle" fill="#557463" font-size="12">build · learn · repeat</text>
     ''')
 
 
 def toolkit(phase=0, still=False):
-    body = ''
-    names = ['TypeScript', 'React', 'Svelte', 'Python', 'dotnet', 'Docker']
-    colors = [CYAN, CYAN, '#f9a68c', '#f9d784', PURPLE, CYAN]
-    categories = ['Language', 'Frontend', 'Frontend', 'Backend', 'Backend', 'Tooling']
-    for i, (name, color) in enumerate(zip(names,colors)):
-        x = 24 + i*161
-        active = max(0, math.cos(math.tau*(phase-i/6)))**6
-        y = 20 - active*3
-        body += f'''<rect x="{x}" y="{y}" width="147" height="78" rx="12" fill="#161b30"/>
-          <text x="{x+14}" y="{y+26}" fill="#9aa8c3" font-size="12">{categories[i]}</text>
-          <text x="{x+14}" y="{y+57}" fill="#eef2ff" font-size="19" font-weight="600">{name}</text>
-          {spark(x+124,y+22,color,.35+active*.65,2.5)}'''
-    return svg(body,118)
+    body=''
+    files=['index.ts','app.tsx','page.svelte','main.py','api.cs','Dockerfile']
+    names=['TypeScript','React','Svelte','Python','dotnet','Docker']
+    ext=['.ts','.tsx','.svelte','.py','.cs','>_']
+    for i,(filename,name,extension) in enumerate(zip(files,names,ext)):
+        x=22+i*161
+        active=max(0,math.cos(math.tau*(phase-i/6)))**6
+        y=18-2*active
+        body+=f'''<rect x="{x}" y="{y}" width="149" height="125" rx="12" fill="#101d16"/>
+          <text x="{x+13}" y="{y+24}" fill="#6f9680" font-size="11">{filename}</text>
+          <text x="{x+13}" y="{y+68}" fill="{GREEN}" font-size="{24 if extension=='.svelte' else 30}" font-weight="700">{extension}</text>
+          <text x="{x+13}" y="{y+103}" fill="#d4e5db" font-size="16">{name}</text>
+          {spark(x+126,y+21,GREEN,.2+.6*active,2)}'''
+    return svg(body,160)
 
 
 def hobbies(phase=0, still=False):
-    a = phase*math.tau
-    strum = 3*math.sin(a*2)
-    code_cursor = .4+.6*math.sin(a)**2
-    ball_x, ball_y = 737+15*math.cos(a), 51-18*abs(math.sin(a))
-    icons = [
-        f'''<g transform="translate(43 32) rotate({-22+strum} 17 29)">
-        <rect x="12" y="-9" width="10" height="13" rx="2"/><path d="M14 4V29M20 4V29"/>
-        <path d="M17 29C10 22 2 26 6 34C9 40 2 40 1 48C0 59 9 65 17 65C25 65 34 59 33 48C32 40 25 40 28 34C32 26 24 22 17 29Z"/>
-        <circle cx="17" cy="44" r="5"/><path d="M11 56H23M17-7V56" stroke-width="1.3"/></g>
-        <path d="M83 34Q{87+strum} 46 83 58M90 29Q{96+strum} 46 90 63" opacity="{.35+.45*math.sin(a)**2:.2f}"/>''',
-        f'''<path d="M380 35L367 48L380 61M410 35L423 48L410 61M402 30L390 66"/>
-        <circle cx="384" cy="82" r="2" stroke="none" fill="{CYAN}" opacity="{code_cursor}"/>
-        <circle cx="395" cy="82" r="2" stroke="none" fill="{CYAN}" opacity="{.4+.6*math.sin(a+.7)**2}"/>
-        <circle cx="406" cy="82" r="2" stroke="none" fill="{CYAN}" opacity="{.4+.6*math.sin(a+1.4)**2}"/>''',
-        f'''<g transform="translate(710 27) rotate({6*math.sin(a)} 18 40)"><ellipse cx="18" cy="18" rx="14" ry="18" transform="rotate(-25 18 18)"/><path d="M26 34L36 55"/></g>
-        <circle cx="{ball_x}" cy="{ball_y}" r="5" fill="{PINK}"/>
-        <ellipse cx="{ball_x}" cy="93" rx="{7-2*abs(math.sin(a))}" ry="1.5" fill="{PINK}" stroke="none" opacity=".2"/>''',
+    angle=phase*math.tau
+    strum=3*math.sin(angle*2)
+    icons=[
+        f'''<g transform="translate(43 62) rotate({-22+strum} 17 29)">
+          <rect x="12" y="-9" width="10" height="13" rx="2"/><path d="M14 4V29M20 4V29"/>
+          <path d="M17 29C10 22 2 26 6 34C9 40 2 40 1 48C0 59 9 65 17 65C25 65 34 59 33 48C32 40 25 40 28 34C32 26 24 22 17 29Z"/>
+          <circle cx="17" cy="44" r="5"/><path d="M11 56H23M17-7V56" stroke-width="1.3"/></g>
+          <path d="M83 64Q{87+strum} 76 83 88M90 59Q{96+strum} 76 90 93" opacity="{.35+.35*math.sin(angle)**2:.2f}"/>''',
+        f'''<path d="M380 69L367 82L380 95M410 69L423 82L410 95M402 64L390 100"/>
+          {''.join(f'<circle cx="{384+i*11}" cy="116" r="2" stroke="none" fill="{GREEN}" opacity="{.3+.6*math.sin(angle+i*.7)**2}"/>' for i in range(3))}''',
+        f'''<g transform="translate(710 63) rotate({6*math.sin(angle)} 18 40)">
+          <ellipse cx="18" cy="18" rx="14" ry="18" transform="rotate(-25 18 18)"/><path d="M26 34L36 55"/></g>
+          <circle cx="{737+15*math.cos(angle)}" cy="{87-18*abs(math.sin(angle))}" r="4" fill="{GREEN}"/>
+          <ellipse cx="{737+15*math.cos(angle)}" cy="129" rx="{7-2*abs(math.sin(angle))}" ry="1.5" fill="{GREEN}" stroke="none" opacity=".2"/>''',
     ]
     body=''
-    for i,(x,title,subtitle,color,icon) in enumerate(zip(
+    for i,(x,title,filename,subtitle,icon) in enumerate(zip(
         [16,345,674],['Guitar','Coding','Paddle sports'],
-        ['A little rhythm.','One more idea.','Time to play.'],[PURPLE,CYAN,PINK],icons,
+        ['guitar.wav','sideproject.ts','paddle.match'],
+        ['Find the rhythm.','Follow the curiosity.','Enjoy the game.'],icons,
     )):
-        body+=f'''<rect x="{x}" y="16" width="310" height="103" rx="14" fill="#161b30"/>
-          <g fill="none" stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{icon}</g>
-          <text x="{x+96}" y="59" fill="#f0f3ff" font-size="21" font-weight="600">{title}</text>
-          <text x="{x+96}" y="87" fill="#a6b0ca" font-size="16">{subtitle}</text>'''
-    return svg(body,135)
+        body+=f'''<rect x="{x}" y="16" width="310" height="157" rx="14" fill="#101d16"/>
+          <text x="{x+20}" y="43" fill="#587b66" font-size="12">./{filename}</text>
+          <g fill="none" stroke="{GREEN}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">{icon}</g>
+          <text x="{x+100}" y="97" fill="#e5f4eb" font-size="{18 if i==2 else 22}" font-weight="600">{title}</text>
+          <text x="{x+20}" y="153" fill="#92ad9e" font-size="15">{subtitle}</text>'''
+    return svg(body,190)
 
 
 def footer(phase=0, still=False):
-    dots=''.join(spark(472+i*28,23,color,.3+.5*math.sin(phase*math.tau-i*.7)**2,2.5)
-                 for i,color in enumerate([CYAN,PURPLE,PINK]))
-    return svg(f'''{dots}<text x="500" y="60" text-anchor="middle" fill="#b3bed7" font-size="16">Build with purpose. Teach with clarity.</text>''',84)
+    cursor=1 if still or int(phase*12)%2==0 else .2
+    return svg(f'''
+      <text x="500" y="43" text-anchor="middle" fill="#94b8a3" font-size="17">Keep building. Keep learning.</text>
+      <text x="483" y="75" text-anchor="middle" fill="{GREEN}" font-size="13">oninsan@github:~$</text>
+      <rect x="562" y="64" width="7" height="14" fill="{GREEN}" opacity="{cursor}"/>
+    ''',100)
 
 
 def save_asset(name, payload):
@@ -182,18 +174,18 @@ def render_animation(name, factory, height, count=48):
 
 
 if __name__=='__main__':
-    for name,factory,height in [('banner',banner,360),('toolkit',toolkit,118),
-                               ('hobbies',hobbies,135),('footer',footer,84)]:
+    for name,factory,height in [('banner',banner,400),('toolkit',toolkit,160),
+                               ('hobbies',hobbies,190),('footer',footer,100)]:
         render_animation(name,factory,height)
     for filename,label,width,color in [
-        ('portfolio.svg','Portfolio',110,PURPLE),
-        ('linkedin.svg','LinkedIn',110,CYAN),
-        ('email.svg','Email me',110,PINK),
-        ('projects.svg','Projects',110,PURPLE),
+        ('portfolio.svg','Portfolio',110,GREEN),
+        ('linkedin.svg','LinkedIn',110,GREEN),
+        ('email.svg','Email me',110,GREEN),
+        ('projects.svg','Projects',110,GREEN),
     ]:
         write(filename,f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="36" viewBox="0 0 {width} 36">
-          <rect width="{width}" height="36" rx="10" fill="#171c30"/>
+          <rect width="{width}" height="36" rx="10" fill="#101d16"/>
           <circle cx="16" cy="18" r="3" fill="{color}"/>
-          <text x="{width/2+7}" y="22" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="600" font-size="12" fill="#e8ecff">{label}</text>
+          <text x="{width/2+7}" y="22" text-anchor="middle" font-family="DejaVu Sans Mono, monospace" font-weight="600" font-size="12" fill="#d5ebdf">{label}</text>
         </svg>''')
     update_readme_assets()

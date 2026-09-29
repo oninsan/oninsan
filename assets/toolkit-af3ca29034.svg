@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="1000" height="160" viewBox="0 0 1000 160">
+    <defs>
+      <radialGradient id="glow"><stop stop-color="#20c878" stop-opacity=".18"/><stop offset="1" stop-color="#20c878" stop-opacity="0"/></radialGradient>
+      <clipPath id="bounds"><rect width="1000" height="160" rx="18"/></clipPath>
+      <clipPath id="rain"><rect x="662" y="24" width="306" height="326" rx="16"/></clipPath>
+    </defs>
+    <rect width="1000" height="160" rx="18" fill="#080f0d"/>
+    <g clip-path="url(#bounds)" font-family="DejaVu Sans Mono, monospace"><rect x="22" y="16.0" width="149" height="125" rx="12" fill="#101d16"/>
+          <text x="35" y="40.0" fill="#6f9680" font-size="11">index.ts</text>
+          <text x="35" y="84.0" fill="#62f6a9" font-size="30" font-weight="700">.ts</text>
+          <text x="35" y="119.0" fill="#d4e5db" font-size="16">TypeScript</text>
+          <circle cx="148.00" cy="37.00" r="6" fill="#62f6a9" opacity="0.096"/>
+      <circle cx="148.00" cy="37.00" r="2" fill="#62f6a9" opacity="0.800"/><rect x="183" y="17.96875" width="149" height="125" rx="12" fill="#101d16"/>
+          <text x="196" y="41.96875" fill="#6f9680" font-size="11">app.tsx</text>
+          <text x="196" y="85.96875" fill="#62f6a9" font-size="30" font-weight="700">.tsx</text>
+          <text x="196" y="120.96875" fill="#d4e5db" font-size="16">React</text>
+          <circle cx="309.00" cy="38.97" r="6" fill="#62f6a9" opacity="0.025"/>
+      <circle cx="309.00" cy="38.97" r="2" fill="#62f6a9" opacity="0.209"/><rect x="344" y="18" width="149" height="125" rx="12" fill="#101d16"/>
+          <text x="357" y="42" fill="#6f9680" font-size="11">page.svelte</text>
+          <text x="357" y="86" fill="#62f6a9" font-size="24" font-weight="700">.svelte</text>
+          <text x="357" y="121" fill="#d4e5db" font-size="16">Svelte</text>
+          <circle cx="470.00" cy="39.00" r="6" fill="#62f6a9" opacity="0.024"/>
+      <circle cx="470.00" cy="39.00" r="2" fill="#62f6a9" opacity="0.200"/><rect x="505" y="18" width="149" height="125" rx="12" fill="#101d16"/>
+          <text x="518" y="42" fill="#6f9680" font-size="11">main.py</text>
+          <text x="518" y="86" fill="#62f6a9" font-size="30" font-weight="700">.py</text>
+          <text x="518" y="121" fill="#d4e5db" font-size="16">Python</text>
+          <circle cx="631.00" cy="39.00" r="6" fill="#62f6a9" opacity="0.024"/>
+      <circle cx="631.00" cy="39.00" r="2" fill="#62f6a9" opacity="0.200"/><rect x="666" y="18" width="149" height="125" rx="12" fill="#101d16"/>
+          <text x="679" y="42" fill="#6f9680" font-size="11">api.cs</text>
+          <text x="679" y="86" fill="#62f6a9" font-size="30" font-weight="700">.cs</text>
+          <text x="679" y="121" fill="#d4e5db" font-size="16">dotnet</text>
+          <circle cx="792.00" cy="39.00" r="6" fill="#62f6a9" opacity="0.024"/>
+      <circle cx="792.00" cy="39.00" r="2" fill="#62f6a9" opacity="0.200"/><rect x="827" y="17.96875" width="149" height="125" rx="12" fill="#101d16"/>
+          <text x="840" y="41.96875" fill="#6f9680" font-size="11">Dockerfile</text>
+          <text x="840" y="85.96875" fill="#62f6a9" font-size="30" font-weight="700">>_</text>
+          <text x="840" y="120.96875" fill="#d4e5db" font-size="16">Docker</text>
+          <circle cx="953.00" cy="38.97" r="6" fill="#62f6a9" opacity="0.025"/>
+      <circle cx="953.00" cy="38.97" r="2" fill="#62f6a9" opacity="0.209"/></g></svg>
